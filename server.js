@@ -13,7 +13,11 @@ import GarbageReport from './model/GarbageReport.js';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: ["https://trash-tracker-frontend-tan.vercel.app/"],
+    methods: ["GET","POST","PUT","DELETE"],
+    credentials: true
+}));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URL, {
