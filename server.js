@@ -14,7 +14,8 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-    origin: ["https://trash-tracker-frontend-tan.vercel.app/"],
+    // origin: ["https://trash-tracker-frontend-tan.vercel.app/"],
+    origin: ["https://trash-tracker-frontend-536bqu90l-aditi-nagpals-projects.vercel.app"],
     methods: ["GET","POST","PUT","DELETE"],
     credentials: true
 }));
